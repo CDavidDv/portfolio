@@ -1,0 +1,113 @@
+---
+import BentoItem from './BentoItem.astro'
+import Icon from './Icon.astro'
+
+import GmailIcon from '../icons/GmailIcon.astro'
+import LinkedinIcon from '../icons/LinkedinIcon.astro'
+import GithubIcon from '../icons/GithubIcon.astro'
+import InstagramIcon from '../icons/InstragramIcon.astro'
+import ButtonCV from './ButtonCV.astro'
+import ButtonToggleTheme from './ButtonToggleTheme.astro'
+import ButtonBackState from './ButtonBackState.astro'
+import JavaScriptIcon from '../icons/JavaScriptIcon.astro'
+import HTMLIcon from '../icons/HTMLIcon.astro'
+import CSSIcon from '../icons/CSSIcon.astro'
+import GitIcon from '../icons/GitIcon.astro'
+import JavaIcon from '../icons/JavaIcon.astro'
+import PHPIcon from '../icons/PHPIcon.astro'
+import VisualStudioIcon from '../icons/VisualStudioIcon.astro'
+import ReactIcon from '../icons/ReactIcon.astro'
+import TailwindIcon from '../icons/TailwindIcon.astro'
+import MySqlIcon from '../icons/MySqlIcon.astro'
+import AstroIcon from '../icons/AstroIcon.astro'
+
+import DetailProjects from './DetailProjects.astro'
+import BoostrapIcon from '../icons/BoostrapIcon.astro'
+
+
+
+---
+
+
+<main class=" justify-center flex w-full">
+<div class=" w-full max-w-[1400px] max-h-[750px] 
+grid md:grid-cols-12 grid-cols-12 grid-rows-[auto] gap-4
+h-screen p-8 sm:p-10 text-white"> 
+
+    <BentoItem id="profile" class=" flex group flex-col place-content-center items-center pt-0 lg:pt-20 col-span-12 sm:col-span-4 sm:row-span-4 md:col-span-4  lg:row-span-6  lg:col-span-3 row-span-6  md:row-span-3  overflow-hidden  " >    
+        <p class="text-amber-950 transition-colors font-black dark:font-bold dark:text-slate-100 text-center flex justify-center text-xl sm-10/12 sm:text-2xl md:w-11/12 px-5 mt-0 lg:mt-10   lg:w-10/12  lg:mt-15">¡Hola! soy Carlos David</p>
+        <img class=" group-hover:scale-100 scale-90 transition-transform  hidden lg:block lg:-mb-10   w-full " src="./photoProfile.webp" alt="">        
+    </BentoItem>    
+    
+    <BentoItem id="experience" tittle="Experiencia" class=`flex relative pb-[8rem]  pt-[8rem] sm:pb-[5rem] sm:pt-[5rem] md:pb-5 lg:pb-[0rem] lg:pt-[0rem]  flex-col  place-content-center  px-5 col-span-12 sm:col-span-8 sm:row-span-8 md:col-span-8 lg:col-span-6 row-span-12 md:row-span-3 lg:row-span-3` >
+        <ButtonToggleTheme />
+        <ButtonBackState />
+        <DetailProjects />
+    </BentoItem>
+
+    
+    
+    
+    <BentoItem  class="  grid h-full sm:col-span-4 sm:row-span-4 sm:py-12 md:py-10  place-content-center  col-span-12 md:col-span-4 lg:col-span-3 row-span-12 md:row-span-3 lg:row-span-3 dark:text-purple-200  text-sky-950 " >
+        
+        <div class="grid grid-cols-4 justify-center gap-1 py-10">
+            <JavaScriptIcon />
+            <HTMLIcon />
+            <CSSIcon />
+            <GitIcon />
+            <BoostrapIcon />
+            <JavaIcon />
+            <PHPIcon />
+            <VisualStudioIcon />
+            <ReactIcon />
+            <TailwindIcon />
+            <MySqlIcon />
+            <GithubIcon />
+            <AstroIcon />
+        </div>
+    </BentoItem>    
+    <BentoItem id="about" tittle="Sobre mi 🇲🇽" class="py-10 grid place-content-center pl-5 sm:col-span-8 sm:row-span-4  col-span-12 md:col-span-4 lg:col-span-6 row-span-12 md:row-span-3 lg:row-span-3 h-full" >
+        <p class="text-normal font-medium w-9/12 text-slate-950 dark:text-slate-100">Me considero un apasionado autodidacta de la tecnología con preferencias por el front-end, siempre en búsqueda de aprender de manera continua.</p>
+    </BentoItem>    
+    <BentoItem tittle="" class='flex flex-col place-content-center  p-5 col-span-12 sm:row-span-12 sm:col-span-4 md:col-span-4 lg:col-span-3 row-span-12 md:row-span-6 lg:row-span-6 h-full '>
+       
+        <div class="dark:shadow-slate-100/5  bg-white/10 p-3 border-2 dark:border-transparent shadow-md shadow-sky-100  rounded-md  ">
+            <p class="  font-extrabold dark:text-slate-100/90  text-slate-900/80">Licenciatura en <span class=" bg-gradient-to-r from-sky-500 via-green-600 to-lime-500 dark:from-orange-300 dark:via-rose-400 dark:to-amber-400  inline-block text-transparent bg-clip-text">Ciencias Computacionales </span> - UAEH. </p>
+            <p class=" text-sm font text-end  dark:text-slate-100/90  text-slate-900/80">Jun-Dic 2019 Ene-Jun 2024</p>
+        </div>
+    </BentoItem>    
+    <BentoItem id="portfolio" tittle="Portfolio" class="p-5 col-span-12 sm:row-span-8 sm:col-span-4 md:col-span-4 lg:col-span-6 row-span-12 md:row-span-3 lg:row-span-3 h-full " >
+        <div id="portfolioContainer" class="gird place-content-center">
+            <ButtonCV tittle="Español">
+            </ButtonCV>
+            <ButtonCV tittle="Íngles">
+            </ButtonCV>
+            <ButtonCV tittle="Web">
+            </ButtonCV>
+        </div>
+    </BentoItem>    
+
+
+    <BentoItem class=" h-full grid place-content-center col-span-12 sm:row-span-8 sm:col-span-4 md:col-span-4 lg:col-span-3 row-span-12 md:row-span-3 lg:row-span-3 " >
+        <div class="m-auto justify-center flex flex-wrap relative">
+            
+            
+            <div class="relative group">
+                <button id="copiToClipBoard" onclick="copiToClipBoard()" class="  absolute top-[-2.40rem] hidden  bg-violet-400 size-10 z-50  rounded-xl  md:group-hover:block">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy size-full p-2"  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg>
+                </button> 
+                <Icon class="" link="mailto:carlos.david1806@mail.com" ><GmailIcon  />
+                          
+                </Icon>
+            </div>
+            <Icon link="https://www.linkedin.com/in/carlos-david-bt"><LinkedinIcon /></Icon>
+            <Icon link="https://github.com/CDavidDv"><GithubIcon /></Icon>
+            <Icon link="https://www.instagram.com/david.1806/" ><InstagramIcon /></Icon>
+            
+        </div>
+    </BentoItem>    
+    
+</main>
+
+
+

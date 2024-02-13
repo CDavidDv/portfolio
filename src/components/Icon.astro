@@ -1,0 +1,14 @@
+---
+const { link } = Astro.props
+---
+
+ 
+
+<div class="group relative">
+    <a href={link} target="_blank" class=`${Astro.props.class} inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-800 to-pink-400 hover:from-purple-800 hover:to-pink-400 dark:hover:text-white dark:text-white focus:ring-4 focus:outline-none dark:focus:ring-purple-800 focus:ring-purple-800 group`>
+        <span class="relative flex items-center px-2 py-2 transition-all ease-in duration-75 bg-violet-50/95 hover:text-slate-100 dark:text-slate-100 text-slate-900 dark:bg-gray-900 rounded-md dark:hover:bg-transparent hover:bg-transparent">
+            <slot/>
+        </span>
+    </a>
+</div>
+

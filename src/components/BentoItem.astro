@@ -1,0 +1,56 @@
+---
+
+const {tittle} = Astro.props;
+
+
+---
+
+<article
+
+  id=`${Astro.props.id}`
+  
+  class={`
+  ${Astro.props.class}
+  relative rounded-md
+   backdrop-blur-[5px]
+  
+  dark:bg-gradient-to-b dark:from-slate-900/10 dark:from-5% dark:via-cyan-900/10 dark:via-30% dark:to-violet-900/10 dark:to-95%
+ dark:bg-transparent dark:bg-opacity-90
+
+  overflow-hidden
+  
+  
+
+  shadow-inner dark:shadow-sky-200/60
+  dark:hover:shadow-gray-100/45
+  dark:hover:border-slate-100/80 dark:hover:border-[2.3px]
+  dark:hover:bg-gray-500/10  
+  dark:border-slate-300/30
+  
+  bg-opacity-95
+  
+  shadow-slate-500
+
+  hover:shadow-slate-800/50
+  hover:border-slate-800 hover:border-[2px]
+  hover:bg-sky-100/10  
+  bg-amber-100/10
+  border-sky-300/10
+
+  bg-clip-text hover:shadow-2xl
+  border-[2px]
+  dark:border-[2.3px]
+  hover:opacity-100   opacity-90 
+   transition-all  duration-400
+  h-full
+
+   
+`}
+>
+<h2 class="font-bold text-2xl pb-2 text-amber-950 dark:text-slate-200 transition-all ">{tittle}</h2>
+<slot />
+  
+</article>
+
+
+

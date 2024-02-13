@@ -1,0 +1,15 @@
+---
+const {tittle, id } = Astro.props
+
+import ArrowRight from '../icons/ArrowRight.astro'
+---
+
+    
+<button onclick=`showDetails(${id})` class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg  bg-gradient-to-br from-green-400 to-blue-600 hover:from-green-400 hover:to-blue-600    focus:ring-4 focus:outline-none focus:ring-green-500 hover:text-slate-100 dark:focus:ring-green-500">
+        <span class="relative flex px-3 py-1 transition-all ease-in duration-75 hover:text-slate-100 font-bold bg-white text-slate-900 dark:text-slate-100 dark:bg-gray-900 rounded-md hover:bg-transparent dark:hover:bg-transparent  items-center">
+            <h3>{tittle}</h3> <ArrowRight />
+            <slot />
+        </span>
+</button>
+
+

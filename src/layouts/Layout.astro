@@ -1,51 +1,149 @@
 ---
-interface Props {
-	title: string;
-}
+
 
 const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content="Portfolio Carlos David" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body >
+		<div class="block dark:hidden fixed w-screen h-screen ">
+			<div class="relative h-full w-full bg-white"><div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div></div>
+		</div>
+		
+		<div class="dark:block hidden fixed w-screen h-screen bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r"></div>
+
 		<slot />
+		
+		<script is:inline>
+
+			const copiToClipBoard = () => {
+							text = "carlos.david1806@mail.com"
+							navigator.clipboard.writeText(text)
+							document.getElementById("copiToClipBoard").classList.add("bg-green-400")
+							document.getElementById("copiToClipBoard").classList.remove("bg-violet-400")
+							
+							setTimeout(() => {
+								document.getElementById("copiToClipBoard").classList.remove("bg-green-400")
+								document.getElementById("copiToClipBoard").classList.add("bg-violet-400")
+							}, "500");
+						}
+			
+			
+						const getElement = id => document.getElementById(id);
+			
+						const hideElement = id => getElement(id).classList.add("hidden");
+						const showElement = id => getElement(id).classList.remove("hidden");
+			
+						const removeClasses = (element, classes) => {
+							classes.forEach(className => element.classList.remove(className));
+						};
+			
+						const addClasses = (element, classes) => {
+							classes.forEach(className => element.classList.add(className));
+						};
+			
+						const classBentoItemExperience = [
+								"sm:col-span-8", "sm:row-span-8", "md:col-span-8", 
+								"lg:col-span-6", "row-span-12", "md:row-span-3", 
+								"lg:row-span-3", "pb-[8rem]"
+							]
+			
+						const addClassBentoItemExperience = [
+							"sm:col-span-12", "md:col-span-12", "lg:col-span-9", 
+							"row-span-6", "md:row-span-12", "lg:row-span-6", "pb-[35rem]" , "md:pb-[0rem]", "h-[40rem]", "md:h-full"
+						]
+			
+						const classBentoItemPortfolio = ["md:row-span-3", "sm:row-span-8"]
+						const addclassBentoItemPortfolio = ["md:row-span-6", "sm:row-span-12"]
+			
+						const showDetails = ((idCont) => {
+							const bentoItemExperience = getElement("experience");
+							const bentoItemPortfolio = getElement("portfolio");
+			
+							hideElement("profile");
+							hideElement("about");
+			
+							removeClasses(bentoItemExperience, classBentoItemExperience);
+							addClasses(bentoItemExperience, addClassBentoItemExperience);
+			
+							removeClasses(bentoItemPortfolio,  classBentoItemPortfolio);
+							addClasses(bentoItemPortfolio, addclassBentoItemPortfolio);
+			
+							showElement("buttonBack");
+
+							
+							const cont = "ContainerDetails"+idCont 
+							const containerDetail = getElement(cont)
+							const Projects = getElement("numberProjects")
+							Projects.classList.remove("hidden")
+							const numberProjects = Projects.getAttribute("numberprojects")
+							for(int = 1 ; int<=numberProjects; int++ ){
+								const cont = "ContainerDetails"+int 
+								const containerDetail = getElement(cont)
+								containerDetail.classList.add("hidden")
+								containerDetail.classList.add("h-[28rem]")
+								containerDetail.classList.add("md:h-[14rem]")
+							}
+
+							containerDetail.classList.remove("hidden")
+						})
+			
+						const hideDetails = () => {
+							const Projects = getElement("numberProjects")
+							Projects.classList.add("hidden")
+							const bentoItemExperience = getElement("experience");
+							const bentoItemPortfolio = getElement("portfolio");
+			
+							showElement("profile");
+							showElement("about");
+			
+							removeClasses(bentoItemExperience, addClassBentoItemExperience);
+							addClasses(bentoItemExperience, classBentoItemExperience);
+			
+							removeClasses(bentoItemPortfolio, addclassBentoItemPortfolio);
+							addClasses(bentoItemPortfolio,  classBentoItemPortfolio);
+			
+							hideElement("buttonBack");
+						};
+			
+			
+						const body = document.body;
+			
+						document.addEventListener('DOMContentLoaded', function(){
+							const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+			
+							const savedTheme = localStorage.getItem('theme');
+			
+							// Establecer tema inicial
+							if (savedTheme) {
+								body.classList.add(savedTheme);
+							} else if (prefersDarkMode) {
+								body.classList.add('dark');
+							} else {
+								body.classList.add('light');
+							}
+						});
+			
+						const buttonToggleTheme = () => {
+							
+							body.classList.toggle('light');
+							body.classList.toggle('dark');
+			
+							// Guardar tema seleccionado en localStorage
+							const currentTheme = body.classList.contains('light') ? 'light' : 'dark';
+							localStorage.setItem('theme', currentTheme);
+							
+						};
+			</script>
 	</body>
+		
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>
