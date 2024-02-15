@@ -86,18 +86,18 @@ const projects = [
         
     {
         projects.map((data) =>(
-            <div id={`ContainerDetails${data.id}`}  class="hidden relative my-2 overflow-hidden   flex flex-col md:flex-row row-span-1 p-4  bottom-0 rounded-sm bg-slate-100 text-black">
+            <div id={`ContainerDetails${data.id}`}  class="hidden lg:w-11/12 w-full mx-auto  relative my-2 overflow-hidden  flex flex-wrap md:flex-row row-span-1 px-10 py-8 bottom-0 rounded-md bg-slate-200 dark:bg-slate-100/20 dark:text-white text-black">
                 <div class="w-full md:w-8/12 ">
                     
-                    <h3 class="text-2xl">{data.tittle}</h3>
-                    <div class="w-full">
-                        <span >{data.description}</span>
-                        <div class="flex pt-1 flex-col md:flex-row">
+                    <h3 class="text-2xl ">{data.tittle}</h3>
+                    <div class="md:w-10/12 w-full">
+                        <p class="mx-auto">{data.description}</p>
+                        <div class="flex pt-1 flex-col md:flex-row ">
                             <span class="w-full md:w-6/12 flex " >
                                 <Icon link={data.url} >GitHub <GithubIcon/></Icon>
                                 { data.urlweb && <Icon link={data.urlweb}  class="flex"><p>Web</p> <WorldIcon/></Icon>}
                             </span >
-                            <span class="w-6/12 flex   justify-end pr-1 text-slate-800 dark:text-violet-800/80">
+                            <span class="w-6/12 flex justify-start   lg:justify-end pr-1 text-slate-800 dark:text-violet-300">
                                 {
                                     data.technologies.map((svgs) =>(
                                         svgs === "javascript" && <JavaScriptIcon /> ||
@@ -120,7 +120,7 @@ const projects = [
                     </div>
                     
                 </div>
-                <img class="w-full md:w-4/12 p-2 top-0 shadow-xl h-fit " src={data.img} alt={"Imagen de " +data.tittle}>
+                <img class="w-full md:w-4/12 p-1 top-0 shadow-xl h-fit " src={data.img} alt={"Imagen de " +data.tittle}>
             </div>                    
         
         ))
