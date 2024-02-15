@@ -17,7 +17,7 @@ const {tittle} = Astro.props;
   dark:bg-gradient-to-b dark:from-slate-900/10 dark:from-5% dark:via-cyan-900/10 dark:via-30% dark:to-violet-900/10 dark:to-95%
  dark:bg-transparent dark:bg-opacity-90
 
-  overflow-hidden
+  
   
   
 
@@ -47,7 +47,8 @@ const {tittle} = Astro.props;
    
 `}
 >
-<h2 class="font-bold text-2xl pb-2 text-amber-950 dark:text-slate-200 transition-all ">{tittle}</h2>
+{ tittle &&  <h2 class="font-bold text-2xl pb-2 text-amber-950 dark:text-slate-200 transition-all ">{tittle}</h2>}
+
 <slot />
   
 </article>

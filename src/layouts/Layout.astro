@@ -54,13 +54,12 @@ const { title } = Astro.props;
 						const classBentoItemExperience = [
 								"sm:col-span-8", "sm:row-span-8", "md:col-span-8", 
 								"lg:col-span-6", "row-span-12", "md:row-span-3", 
-								"lg:row-span-3", "pb-[8rem]", "pt-[8rem]"
+								"lg:row-span-3"
 							]
 			
 						const addClassBentoItemExperience = [
 							"sm:col-span-12", "md:col-span-12", "lg:col-span-9", 
-							"row-span-6", "md:row-span-12", "lg:row-span-6", "pb-[36rem]" , "md:pb-[0rem]", "h-[38rem]", "md:h-full",
-							"pt-[12rem]"
+							"row-span-6", "md:row-span-12", "lg:row-span-6"
 						]
 			
 						const classBentoItemPortfolio = ["md:row-span-3", "sm:row-span-8"]
@@ -91,8 +90,6 @@ const { title } = Astro.props;
 								const cont = "ContainerDetails"+int 
 								const containerDetail = getElement(cont)
 								containerDetail.classList.add("hidden")
-								containerDetail.classList.add("h-[30rem]")
-								containerDetail.classList.add("md:h-[14rem]")
 							}
 
 							containerDetail.classList.remove("hidden")
