@@ -16,62 +16,7 @@ import NetBeansIcon from '../icons/NetBeansIcon.astro'
 import ReactIcon from '../icons/ReactIcon.astro'
 
 
-const projects = [
-{
-        "id": "1",
-        "tittle": "Figra-gas",
-        "description": "Desarrollé la página web para esta empresa utilizando HTML, CSS (Bootstrap) y JavaScript vanilla. El diseño fue que fuera simple pero que mostrara claramente el precio e imágenes de la empresa y que fuera responsive.",
-        "technologies": ["javascript", "css", "html","bootstrap", "mysql", "php"],
-        "urlweb": "https://www.figragas.com/",
-        "url": "https://github.com/CDavidDv/Figra-Gas",
-        "img": "./figragas.webp"
-    },
-    {
-        "id": "2",
-        "tittle": "Laboratorios",
-        "description": "Elaboré su página web utilizando HTML, CSS (TailwindCSS), JavaScript vanilla, con el framework Astro.build. El objetivo era crear un diseño empresarial y formal, utilizando sus colores institucionales.",
-        "technologies": ["javascript", "css", "html","tailwind", "astro"],
-        "urlweb": "https://www.labtlatlauquitepec.com/",
-        "url": "https://github.com/CDavidDv/labortorio-page",
-        "img": "./labtlatlauquitepec.webp"
-    },
-    {
-        "id": "3",
-        "tittle": "MACE",
-        "description": "Desarrollé un emprendimiento con unos compañeros de la universidad enfocado en el desarrollo de páginas web, aplicaciones web y de escritorio. Para su creación, utilizamos Astro, HTML, CSS (Tailwind), y JavaScript.",
-        "technologies": ["javascript", "css", "html","tailwind", "astro"],
-        "urlweb": "https://www.mace-technology.com/",
-        "url": "https://github.com/CDavidDv/mace-technology",
-        "img": "./mace.webp"
-    },
-    {
-        "id": "4",
-        "tittle": "Java",
-        "description": "La misma empresa de laboratorios nos solicitó un programa de escritorio, el cual desarrollé utilizando Java con NetBeans y una base de datos en SQLite, debido a los requisitos del proyecto.",
-        "technologies": ["java", "sqlite", "netbeans"],
-        "urlweb": "",
-        "url": "https://github.com/CDavidDv/laboratories",
-        "img": "./laboratorios.webp"
-    },
-    {
-        "id": "5",
-        "tittle": "Connect 4",
-        "description": "En mi proceso de aprendizaje de nuevas tecnologías, realicé un proyecto de Connect 4 utilizando los recursos de React y los 'hooks', específicamente useState y lo deploye en Netlify.",
-        "technologies": ["javascript", "css", "html","tailwind", "react"],
-        "urlweb": "https://wonderful-lolly-448912.netlify.app/",
-        "url": "https://github.com/CDavidDv/react-practice",
-        "img": "./connect4.webp"
-    },
-    {
-        "id": "6",
-        "tittle": "Portfolio",
-        "description": "Quise utilizar tecnologías para practicar y crear un portafolio que demostrara mis conocimientos, y lo desplegué en Netlify.",
-        "technologies": ["javascript", "css", "html","tailwind", "astro"],
-        "urlweb": "https://portfoliocdavidv.netlify.app/",
-        "url": "https://github.com/CDavidDv/portfolio",
-        "img": "./portfolio.webp"
-    },
-]
+import projects from '../projects.json'
 ---
 
 {
