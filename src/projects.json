@@ -4,7 +4,7 @@
             "tittle": "Figra-gas",
             "description": "Desarrollé la página web para esta empresa utilizando HTML, CSS (Bootstrap) y JavaScript vanilla. El diseño fue que fuera simple pero que mostrara claramente el precio e imágenes de la empresa y que fuera responsive.",
             "technologies": ["javascript", "css", "html","bootstrap", "mysql", "php"],
-            "urlweb": "https://www.figragas.com/",
+            "urlweb": "",
             "url": "https://github.com/CDavidDv/Figra-Gas",
             "img": "./figragas.webp"
         },
@@ -61,5 +61,14 @@
             "urlweb": "https://cv-carlos-david-bt.netlify.app",
             "url": "https://github.com/CDavidDv/cv",
             "img": "./cv.webp"
+        },
+        {
+            "id": "8",
+            "tittle": "Marquesitas",
+            "description": "Un negocio de postres queria llevar el registro de sus ventas, inventario y poder tener las funciones CRUD principales en varias sucursales. Se desarrollo una aplicación web con Laravel, vue3",
+            "technologies": ["javascript", "css", "html", "tailwind", "php", "mysql", "laravel"],
+            "urlweb": "https://www.figragas.com/",
+            "url": "https://github.com/CDavidDv/marquesitas4",
+            "img": "./marquesitas.webp"
         }
     ]
