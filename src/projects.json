@@ -70,5 +70,14 @@
             "urlweb": "https://www.figragas.com/",
             "url": "https://github.com/CDavidDv/marquesitas4",
             "img": "./marquesitas.webp"
+        },
+        {
+            "id": "8",
+            "tittle": "Real de Plateros",
+            "description": "Una empresa dedicada a la producción de pastes en Hidalgo quería implementar un sistema de punto de venta (POS) que les permitiera gestionar ventas, impresión de tickets desde una página web y administración del inventario y empleados. El sistema se diseñó para operar en un servidor local, permitiendo la comunicación directa con impresoras y asegurando la disponibilidad continua del sistema sin depender de la conexión a Internet. La solución se desarrolló usando Laravel para el backend y Vue 3 para la interfaz de usuario.",
+            "technologies": ["javascript", "css", "html", "tailwind", "php", "mysql", "laravel"],
+            "urlweb": "https://www.realplateros.com/",
+            "url": "",
+            "img": "./realplateros.webp"
         }
     ]
